@@ -122,7 +122,7 @@ async function FidelidadePage() {
                       <span className="text-sm">Açaí 500ml tradicional</span>
                       <Badge
                         variant="outline"
-                        className="border-primary-foreground/30"
+                        className="border-primary-foreground/30 text-white"
                       >
                         100 pts
                       </Badge>

@@ -26,9 +26,9 @@ function CouponCardSkeleton() {
             <h3 className="font-bold text-xl leading-tight">
               <Skeleton className="h-6 w-full" />
             </h3>
-            <p className="text-sm text-muted-foreground mt-1">
+            <div className="text-sm text-muted-foreground mt-1">
               <Skeleton className="h-4 w-full" />
-            </p>
+            </div>
           </div>
 
           <Skeleton className="h-4 w-full" />
