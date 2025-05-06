@@ -13,7 +13,7 @@ function Header({ className }: HeaderProps) {
         className,
       )}
     >
-      <h1 className="text-2xl font-bold">GLOW</h1>
+      <h1 className="text-2xl font-bold">JAH</h1>
     </header>
   );
 }
