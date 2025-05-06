@@ -8,7 +8,7 @@ const routes = [
 
 function BottomNav() {
   return (
-    <div className="bottom-nav-container h-[calc(80px+env(safe-area-inset-bottom))]">
+    <div className="h-[90px] w-full">
       <nav className="bottom-nav fixed bottom-0 inset-x-0 z-50 h-[80px] flex items-center justify-around bg-white border-t">
         {routes.map((route) => (
           <BottomNavLink

@@ -182,17 +182,10 @@ main {
   padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
 }
 
-@supports (-webkit-touch-callout: none) {
-  body {
-    overscroll-behavior-y: none;
-    position: fixed;
-    width: 100%;
-    height: -webkit-fill-available;
-    overflow-y: auto;
-  }
-
-  html {
-    height: -webkit-fill-available;
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  main,
+  .main-content {
+    padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
   }
 }
 
