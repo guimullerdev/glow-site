@@ -108,22 +108,14 @@ body {
   overflow-x: hidden;
 }
 
-.header {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-}
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
 
-.bottom-nav {
-  background-color: var(--background);
-  border-top: 1px solid var(--border);
-}
-
-.bottom-nav-link {
-  color: var(--muted-foreground);
-}
-
-.bottom-nav-link.active {
-  color: var(--primary);
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 .dark {
@@ -160,34 +152,23 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
+.header {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
-.pb-safe {
-  padding-bottom: env(safe-area-inset-bottom);
+.bottom-nav {
+  background-color: var(--background);
+  /* border-top: 1px solid var(--border); */
 }
 
-.h-screen-safe {
-  height: calc(100vh - env(safe-area-inset-bottom));
+.bottom-nav-link {
+  color: var(--muted-foreground);
 }
 
-main {
-  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+.bottom-nav-link.active {
+  color: var(--primary);
 }
-
-/* @supports (padding-bottom: env(safe-area-inset-bottom)) {
-  main,
-  .main-content {
-    padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
-  }
-} */
 
 /* Swiper */
 .swiper-pagination-bullet {
