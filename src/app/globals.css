@@ -179,32 +179,33 @@ body {
 }
 
 @supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+
   .bottom-nav {
-    height: 64px;
+    transform: translate3d(0, 0, 0);
     padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px !important;
   }
 
   .bottom-nav-link {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    flex-shrink: 0;
-    min-height: 64px;
+    height: 64px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
 
-  .bottom-nav-link svg,
-  .bottom-nav-link span {
-    flex-shrink: 0;
+  .bottom-nav-container {
+    height: calc(64px + env(safe-area-inset-bottom));
+    width: 100%;
   }
-}
-
-main {
-  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
-}
-
-/* custom */
-.bottom-nav {
-  will-change: transform;
-  transition: transform 0.3s ease;
 }
 
 /* Swiper */
