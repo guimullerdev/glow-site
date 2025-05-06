@@ -28,17 +28,20 @@ function BottomNavLink({ href, label, icon, className }: BottomNavLinkProps) {
     <Link
       href={href}
       className={cn(
-        'bottom-nav-link flex flex-1 h-full flex-col items-center justify-center',
+        'flex flex-1 h-full flex-col items-center justify-center py-4',
         isActive && 'active',
         className,
       )}
+      style={{ minHeight: '70px' }}
     >
-      <Icon
-        className="h-6 w-6"
-        fill={isActive ? 'currentColor' : 'none'}
-        strokeWidth={isActive ? 1.5 : 2}
-      />
-      <span className="text-xs mt-1.5">{label}</span>
+      <div className="flex flex-col items-center">
+        <Icon
+          className="h-7 w-7" // Ícones maiores
+          fill={isActive ? 'currentColor' : 'none'}
+          strokeWidth={isActive ? 1.5 : 2}
+        />
+        <span className="text-sm font-medium mt-2">{label}</span>
+      </div>
     </Link>
   );
 }

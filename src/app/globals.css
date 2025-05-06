@@ -178,39 +178,23 @@ body {
   height: calc(100vh - env(safe-area-inset-bottom));
 }
 
-@supports (-webkit-touch-callout: none) {
-  .bottom-nav {
-    transform: translate3d(0, 0, 0);
-    padding-bottom: env(safe-area-inset-bottom);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px !important;
-    /* Aumentado de 64px para 80px */
-  }
-
-  .bottom-nav-link {
-    height: 80px !important;
-    /* Aumentado de 64px para 80px */
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-  }
-
-  .bottom-nav-container {
-    height: calc(80px + env(safe-area-inset-bottom));
-    width: 100%;
-  }
-}
-
-/* Também ajuste o padding do conteúdo principal, se necessário */
 main {
   padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
 }
 
+@supports (-webkit-touch-callout: none) {
+  body {
+    overscroll-behavior-y: none;
+    position: fixed;
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow-y: auto;
+  }
+
+  html {
+    height: -webkit-fill-available;
+  }
+}
 
 /* Swiper */
 .swiper-pagination-bullet {
