@@ -8,18 +8,16 @@ const routes = [
 
 function BottomNav() {
   return (
-    <div className="h-[90px] w-full">
-      <nav className="bottom-nav fixed bottom-0 inset-x-0 z-50 h-[80px] flex items-center justify-around bg-white border-t">
-        {routes.map((route) => (
-          <BottomNavLink
-            key={route.href}
-            href={route.href}
-            label={route.label}
-            icon={route.icon}
-          />
-        ))}
-      </nav>
-    </div>
+    <nav className="bottom-nav fixed bottom-0 inset-x-0 z-50 h-16 flex items-center justify-around bg-white border-t pb-safe">
+      {routes.map((route) => (
+        <BottomNavLink
+          key={route.href}
+          href={route.href}
+          label={route.label}
+          icon={route.icon}
+        />
+      ))}
+    </nav>
   );
 }
 

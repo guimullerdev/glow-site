@@ -182,12 +182,12 @@ main {
   padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
 }
 
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
+/* @supports (padding-bottom: env(safe-area-inset-bottom)) {
   main,
   .main-content {
     padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
   }
-}
+} */
 
 /* Swiper */
 .swiper-pagination-bullet {
