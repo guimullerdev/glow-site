@@ -34,11 +34,11 @@ function BottomNavLink({ href, label, icon, className }: BottomNavLinkProps) {
       )}
     >
       <Icon
-        className="h-5 w-5"
+        className="h-6 w-6"
         fill={isActive ? 'currentColor' : 'none'}
         strokeWidth={isActive ? 1.5 : 2}
       />
-      <span className="text-xs mt-1">{label}</span>
+      <span className="text-xs mt-1.5">{label}</span>
     </Link>
   );
 }
