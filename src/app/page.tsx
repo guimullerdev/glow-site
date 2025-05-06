@@ -21,7 +21,7 @@ function Home() {
     {
       id: '3',
       thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
-      title: 'DESCUBRA A GLOW:',
+      title: 'DESCUBRA A JAH:',
       subtitle: 'SABOR, QUALIDADE E INOVAÇÃO',
     },
   ];
@@ -123,13 +123,13 @@ function Home() {
               <div className="relative w-24 h-24 mr-4 flex-shrink-0">
                 <Image
                   src="https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png"
-                  alt="Açaí Especial GLOW"
+                  alt="Açaí Especial JAH"
                   fill
                   className="rounded-md object-cover"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg">Açaí Especial GLOW</h3>
+                <h3 className="font-bold text-lg">Açaí Especial JAH</h3>
                 <p className="text-sm text-gray-600 mb-2">
                   Nosso produto premium com granola, banana, morango e leite
                   condensado
