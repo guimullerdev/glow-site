@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'JAH. Açaí Premium',
+  title: 'GLOW',
   description:
     'Os melhores açaís da cidade com promoções exclusivas e programa de fidelidade',
   manifest: '/manifest.json',
