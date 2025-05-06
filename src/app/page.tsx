@@ -1,103 +1,157 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-export default function Home() {
+import { BannerSlider } from '@/components/shared/BannerSlider';
+import { ProductCarousel } from '@/components/shared/ProductCarousel';
+import { PageLayout } from '@/components/layout/PageLayout';
+
+function Home() {
+  const bannerData = [
+    {
+      id: '1',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      title: 'ELE CHEGOU! DOCE DE LEITE',
+      subtitle: '#COMBINA COM TUDO',
+    },
+    {
+      id: '2',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      title: 'Shake Triplo Chocolate',
+      subtitle: 'Experimente nosso novo shake!',
+    },
+    {
+      id: '3',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      title: 'DESCUBRA A GLOW:',
+      subtitle: 'SABOR, QUALIDADE E INOVAÇÃO',
+    },
+  ];
+
+  const popularProducts = [
+    {
+      id: 'p1',
+      name: 'Açaí Tradicional 500ml',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 19.9,
+      discountPrice: 16.9,
+    },
+    {
+      id: 'p2',
+      name: 'Açaí com Banana 500ml',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 22.9,
+    },
+    {
+      id: 'p3',
+      name: 'Açaí Premium 700ml',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 25.9,
+      discountPrice: 21.9,
+    },
+    {
+      id: 'p4',
+      name: 'Açaí com Morango 500ml',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 23.9,
+    },
+    {
+      id: 'p5',
+      name: 'Açaí Mix Frutas 700ml',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 27.9,
+    },
+  ];
+
+  const newProducts = [
+    {
+      id: 'n1',
+      name: 'Shake Triplo Chocolate',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 18.9,
+      discountPrice: 15.9,
+    },
+    {
+      id: 'n2',
+      name: 'Açaí com Doce de Leite',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 26.9,
+    },
+    {
+      id: 'n3',
+      name: 'Smoothie de Morango',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 17.9,
+    },
+    {
+      id: 'n4',
+      name: 'Smoothie de Manga',
+      thumb: 'https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png',
+      price: 17.9,
+    },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <PageLayout>
+      <div className="flex flex-col gap-6 pb-20">
+        <BannerSlider banners={bannerData} autoPlay={true} interval={5000} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <section className="px-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-primary rounded-lg p-4 text-white flex flex-col">
+              <span className="text-sm">Seja Bem-vind@</span>
+              <span className="font-bold">Primeira compra</span>
+              <span className="text-xl font-bold mb-2">50% OFF</span>
+            </div>
+
+            <div className="bg-primary rounded-lg p-4 text-white flex flex-col">
+              <span className="text-sm">Combo Perfeito</span>
+              <span className="font-bold">Pote 1,5L + Pote 500ml</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6">
+          <ProductCarousel title="Mais Populares" products={popularProducts} />
+        </section>
+
+        <section className="px-6">
+          <ProductCarousel title="Novidades" products={newProducts} />
+        </section>
+
+        <section className="px-4">
+          <div className="bg-amber-100 rounded-lg p-4">
+            <div className="flex items-center">
+              <div className="relative w-24 h-24 mr-4 flex-shrink-0">
+                <Image
+                  src="https://jahdoacai.com.br/wp-content/uploads/2023/08/1-2.png"
+                  alt="Açaí Especial GLOW"
+                  fill
+                  className="rounded-md object-cover"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-lg">Açaí Especial GLOW</h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  Nosso produto premium com granola, banana, morango e leite
+                  condensado
+                </p>
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-col">
+                    <span className="text-xs line-through text-muted-foreground">
+                      R$ 29,90
+                    </span>
+                    <span className="text-lg font-bold">R$ 24,90</span>
+                  </div>
+                  <button className="bg-primary text-white px-3 py-1 rounded-md text-sm">
+                    Adicionar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </PageLayout>
   );
 }
+
+export default Home;

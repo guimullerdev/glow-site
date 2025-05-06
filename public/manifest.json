@@ -1,0 +1,21 @@
+{
+  "name": "GLOW açaí",
+  "short_name": "GLOW",
+  "icons": [
+    {
+      "src": "/logo-glow.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-glow.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#9333ea",
+  "background_color": "#9333ea",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

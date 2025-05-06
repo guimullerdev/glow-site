@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.enable": false,
+  "eslint.enable": false,
+  "biome.enabled": true,
+  "biome.lspBin": "${workspaceFolder}/node_modules/@biomejs/biome/bin/biome",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  }
+}
