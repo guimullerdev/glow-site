@@ -28,17 +28,17 @@ function BottomNavLink({ href, label, icon, className }: BottomNavLinkProps) {
     <Link
       href={href}
       className={cn(
-        'flex flex-1 h-full flex-col items-center justify-center',
+        'bottom-nav-link flex flex-1 h-full flex-col items-center justify-center',
         isActive && 'active',
         className,
       )}
     >
       <Icon
-        className="h-7 w-7"
+        className="h-5 w-5"
         fill={isActive ? 'currentColor' : 'none'}
         strokeWidth={isActive ? 1.5 : 2}
       />
-      <span className="text-sm font-medium mt-2">{label}</span>
+      <span className="text-xs mt-1">{label}</span>
     </Link>
   );
 }
