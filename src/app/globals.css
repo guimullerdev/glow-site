@@ -159,7 +159,6 @@ body {
 
 .bottom-nav {
   background-color: var(--background);
-  /* border-top: 1px solid var(--border); */
 }
 
 .bottom-nav-link {
@@ -169,6 +168,18 @@ body {
 .bottom-nav-link.active {
   color: var(--primary);
 }
+
+/* IOS */
+@supports (-webkit-hyphens:none) {
+  body {
+    background-color: red;
+  }
+
+  .bottom-nav {
+    padding-bottom: calc(.5rem + env(safe-area-inset-bottom))
+  }
+}
+
 
 /* Swiper */
 .swiper-pagination-bullet {
