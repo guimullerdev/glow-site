@@ -37,9 +37,8 @@ function RootLayout({
       <head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
 
         <script
           dangerouslySetInnerHTML={{
@@ -52,7 +51,7 @@ function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground pb-[calc(64px+env(safe-area-inset-bottom))]`}
       >
         {children}
         <BottomNav />

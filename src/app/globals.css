@@ -181,6 +181,12 @@ body {
   } */
 }
 
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 /* Swiper */
 .swiper-pagination-bullet {
   @apply bg-white/70;

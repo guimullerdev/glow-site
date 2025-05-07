@@ -1,9 +1,12 @@
 module.exports = {
   theme: {
     extend: {
-      padding: {
-        safe: 'env(safe-area-inset-bottom)',
-      },
+      spacing: {
+        'safe': 'env(safe-area-inset-bottom)',
+      }
     },
   },
-};
+  safelist: [
+    'pb-safe'
+  ],
+}
