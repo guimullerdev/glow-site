@@ -171,14 +171,14 @@ body {
 
 /* IOS */
 @supports (-webkit-hyphens: none) {
-  body {
+  /* body {
     background-color: red;
   }
 
   .bottom-nav {
     padding-bottom: calc(.5rem + env(safe-area-inset-bottom));
     height: calc(.5rem + env(safe-area-inset-bottom));
-  }
+  } */
 }
 
 /* Swiper */
