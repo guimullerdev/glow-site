@@ -202,6 +202,58 @@ body {
   height: calc(60px + env(safe-area-inset-bottom));
 }
 
+/* PWA */
+/* No seu globals.css */
+@supports (padding: max(0px)) {
+  body {
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+
+  .bottom-nav {
+    height: 64px;
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+    height: calc(64px + env(safe-area-inset-bottom));
+  }
+
+  /* Para considerar o espaço do bottom nav no conteúdo */
+  .pb-nav {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Detecta se está em modo standalone (PWA) */
+@media all and (display-mode: standalone) {
+  .bottom-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .bottom-nav-link {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .bottom-nav-link:active {
+    transform: scale(0.9);
+  }
+
+  .bottom-nav-link.active {
+    position: relative;
+  }
+
+  .bottom-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: currentColor;
+  }
+}
+
+
+
 /* Swiper */
 .swiper-pagination-bullet {
   @apply bg-white/70;

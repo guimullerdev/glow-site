@@ -8,7 +8,7 @@ const routes = [
 
 function BottomNav() {
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-50 flex items-center justify-around bg-white border-t h-[60px] safe-bottom">
+    <nav className="bottom-nav fixed bottom-0 inset-x-0 z-50 flex items-center justify-around bg-white/95 backdrop-blur-md border-t shadow-lg">
       {routes.map((route) => (
         <BottomNavLink
           key={route.href}
