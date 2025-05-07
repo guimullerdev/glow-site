@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
 import { BottomNav } from '@/components/layout/BottomNav';
+import { ViewportHeightProvider } from '@/utils/useViewportHeight';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -53,7 +54,8 @@ function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground pb-[calc(64px+env(safe-area-inset-bottom))]`}
       >
-        {children}
+        <ViewportHeightProvider />
+        <main>{children}</main>
         <BottomNav />
       </body>
     </html>

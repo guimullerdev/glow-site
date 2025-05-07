@@ -4,10 +4,17 @@
 @custom-variant dark (&:is(.dark *));
 
 html {
-  height: -webkit-fill-available;
+  height: 100%;
+  overflow: hidden;
+}
+
+main {
+  padding-bottom: calc(60px + env(safe-area-inset-bottom));
 }
 
 :root {
+  --vh: 1vh;
+
   --primary: #331340;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
@@ -106,6 +113,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: -webkit-fill-available;
   overflow-x: hidden;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @layer base {
@@ -181,10 +191,15 @@ body {
   } */
 }
 
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
+/* @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom);
   }
+} */
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+  height: calc(60px + env(safe-area-inset-bottom));
 }
 
 /* Swiper */
