@@ -183,8 +183,8 @@ body {
 /* PWA */
 @media all and (display-mode: standalone) {
   .bottom-nav {
-    padding-bottom: env(safe-area-inset-bottom);
-    height: calc(6rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    height: calc(5rem + env(safe-area-inset-bottom));
   }
 }
 
