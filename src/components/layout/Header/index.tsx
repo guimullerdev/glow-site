@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 import { cn } from '@/lib/utils';
 
 type HeaderProps = {

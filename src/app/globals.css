@@ -181,7 +181,7 @@ body {
 }
 
 /* PWA */
-@media all and (display-mode: standalone) and @supports (-webkit-hyphens: none) {
+@media all and (display-mode: standalone) {
   /* .bottom-nav {
     padding-bottom: calc(1rem + env(safe-area-inset-bottom));
     height: calc(5rem + env(safe-area-inset-bottom));
