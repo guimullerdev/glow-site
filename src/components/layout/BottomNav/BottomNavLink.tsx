@@ -38,7 +38,7 @@ function BottomNavLink({ href, label, icon, className }: BottomNavLinkProps) {
         fill={isActive ? 'currentColor' : 'none'}
         strokeWidth={isActive ? 1.5 : 2}
       />
-      <span className="text-xs mt-1">{label}</span>
+      <span className="text-xs mt-1 text-gray-600">{label}</span>
     </Link>
   );
 }

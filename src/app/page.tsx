@@ -136,7 +136,7 @@ function Home() {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex flex-col">
-                    <span className="text-xs line-through text-muted-foreground">
+                    <span className="text-xs line-through text-gray-600">
                       R$ 29,90
                     </span>
                     <span className="text-lg font-bold">R$ 24,90</span>

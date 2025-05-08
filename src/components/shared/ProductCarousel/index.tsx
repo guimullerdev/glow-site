@@ -72,7 +72,7 @@ function ProductCarousel({ title, products }: ProductCarouselProps) {
                     <div>
                       {product.discountPrice ? (
                         <div className="flex flex-col">
-                          <span className="text-xs line-through text-muted-foreground">
+                          <span className="text-xs line-through text-gray-600">
                             {formatCurrency(product.price)}
                           </span>
                           <span className="text-sm font-bold">
