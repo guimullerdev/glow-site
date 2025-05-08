@@ -182,16 +182,17 @@ body {
 
 /* PWA */
 @media all and (display-mode: standalone) {
-  /* .bottom-nav {
+  .bottom-nav {
     padding-bottom: calc(1rem + env(safe-area-inset-bottom));
     height: calc(5rem + env(safe-area-inset-bottom));
-  } */
-  @supports (-webkit-hyphens: none) {
+  }
+
+  /* @supports (-webkit-hyphens: none) {
     .bottom-nav {
       padding-bottom: env(safe-area-inset-bottom);
       height: calc(4rem + env(safe-area-inset-bottom));
     }
-  }
+  } */
 }
 
 /* Swiper */
