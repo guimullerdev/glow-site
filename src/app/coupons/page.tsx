@@ -12,7 +12,7 @@ async function CouponPage() {
 
   return (
     <PageLayout>
-      <div className="container mx-auto p-4 pb-20 max-w-6xl">
+      <div className="container mx-auto p-4 pb-10 max-w-6xl">
         <div className="relative mb-8">
           <div className="absolute -top-6 -left-4 w-16 h-16 bg-primary/10 rounded-full blur-2xl" />
           <div className="relative z-10">

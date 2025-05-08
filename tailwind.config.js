@@ -5,8 +5,8 @@ module.exports = {
         safe: 'env(safe-area-inset-bottom)',
       },
       height: {
-        screen: '100vh', // Padrão
-        'screen-dynamic': 'calc(var(--vh, 1vh) * 100)', // Dinâmico
+        screen: '100vh',
+        'screen-dynamic': 'calc(var(--vh, 1vh) * 100)',
       },
     },
   },

@@ -3,15 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-main {
-  padding-bottom: calc(60px + env(safe-area-inset-bottom));
-}
-
 :root {
   --vh: 1vh;
 
@@ -111,11 +102,9 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: -webkit-fill-available;
   overflow-x: hidden;
   height: 100%;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 @layer base {
@@ -179,80 +168,26 @@ body {
   color: var(--primary);
 }
 
-/* IOS */
-@supports (-webkit-hyphens: none) {
-  /* body {
-    background-color: red;
-  }
-
-  .bottom-nav {
-    padding-bottom: calc(.5rem + env(safe-area-inset-bottom));
-    height: calc(.5rem + env(safe-area-inset-bottom));
-  } */
+.bottom-nav {
+  height: 4rem;
 }
 
-/* @supports (padding-bottom: env(safe-area-inset-bottom)) {
-  .pb-safe {
+/* IOS */
+@supports (-webkit-hyphens: none) {
+  .bottom-nav {
     padding-bottom: env(safe-area-inset-bottom);
+    height: calc(4rem + env(safe-area-inset-bottom));
   }
-} */
-
-.safe-bottom {
-  padding-bottom: env(safe-area-inset-bottom);
-  height: calc(60px + env(safe-area-inset-bottom));
 }
 
 /* PWA */
-/* No seu globals.css */
-@supports (padding: max(0px)) {
-  body {
-    padding-bottom: max(0px, env(safe-area-inset-bottom));
-  }
-
-  .bottom-nav {
-    height: 64px;
-    padding-bottom: max(0px, env(safe-area-inset-bottom));
-    height: calc(64px + env(safe-area-inset-bottom));
-  }
-
-  /* Para considerar o espaço do bottom nav no conteúdo */
-  .pb-nav {
-    padding-bottom: calc(64px + env(safe-area-inset-bottom));
-  }
-}
-
-/* Detecta se está em modo standalone (PWA) */
 @media all and (display-mode: standalone) {
-  .bottom-nav {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-
-  .bottom-nav-link {
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .bottom-nav-link:active {
-    transform: scale(0.9);
-  }
-
-  .bottom-nav-link.active {
-    position: relative;
-  }
-
-  .bottom-nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    width: 50%;
-    height: 3px;
-    border-radius: 1.5px;
-    background-color: currentColor;
+  header {
+    height: 6rem;
+    align-items: end;
+    padding-bottom: 1rem;
   }
 }
-
-
 
 /* Swiper */
 .swiper-pagination-bullet {

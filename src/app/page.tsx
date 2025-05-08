@@ -91,7 +91,7 @@ function Home() {
 
   return (
     <PageLayout>
-      <div className="flex flex-col gap-6 pb-20">
+      <div className="flex flex-col gap-6 pb-10">
         <BannerSlider banners={bannerData} autoPlay={true} interval={5000} />
 
         <section className="px-4">

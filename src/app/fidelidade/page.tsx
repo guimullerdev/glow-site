@@ -61,7 +61,7 @@ async function FidelidadePage() {
 
   return (
     <PageLayout>
-      <div className="container mx-auto p-4 space-y-8 pb-20 max-w-5xl">
+      <div className="container mx-auto p-4 space-y-8 pb-10 max-w-5xl">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight flex items-center gap-2">
@@ -289,8 +289,8 @@ async function FidelidadePage() {
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="mb-4 bg-gray-100">
               <TabsTrigger value="all">Todas atividades</TabsTrigger>
-              <TabsTrigger value="earned">Pontos ganhos</TabsTrigger>
-              <TabsTrigger value="redeemed">Pontos usados</TabsTrigger>
+              <TabsTrigger value="earned">Ganhos</TabsTrigger>
+              <TabsTrigger value="redeemed">Usados</TabsTrigger>
             </TabsList>
 
             <TabsContent value="all" className="space-y-6">
