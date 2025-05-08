@@ -184,7 +184,7 @@ body {
 @media all and (display-mode: standalone) {
   .bottom-nav {
     padding-bottom: env(safe-area-inset-bottom);
-    height: calc(4rem + env(safe-area-inset-bottom));
+    height: calc(6rem + env(safe-area-inset-bottom));
   }
 }
 
