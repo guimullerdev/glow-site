@@ -78,11 +78,11 @@ function BannerSlider({
           </SwiperSlide>
         ))}
 
-        <div className="swiper-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-md bg-white/80 shadow-md">
-          <ChevronLeft size={20} />
+        <div className="swiper-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-md bg-primary/80 shadow-md">
+          <ChevronLeft size={20} className="text-white" />
         </div>
-        <div className="swiper-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-md bg-white/80 shadow-md">
-          <ChevronRight size={20} />
+        <div className="swiper-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-md bg-primary/80 shadow-md">
+          <ChevronRight size={20} className="text-white" />
         </div>
       </Swiper>
     </div>
